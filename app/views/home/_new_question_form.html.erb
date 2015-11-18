@@ -1,0 +1,30 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Submit Question</h4>
+			</div>
+			<div class="modal-body">
+				<%= form_for :questions, url: '/questions', html: { class: 'form-horizontal'} do %>
+					<div class="form-group">
+						<label for="inputEmail" class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-10">
+							<input name="question[email]" type="email" value="<%= current_user_email %>" class="form-control" id="inputEmail" placeholder="Email" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputQuestion" class="col-sm-2 control-label">Password</label>
+						<div class="col-sm-10">
+							<textarea name="question[body]" class="form-control" id="inputQuestion" placeholder="Tell us about what you're craving" required></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-primary">Submit Question</button>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
