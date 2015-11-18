@@ -8,8 +8,8 @@
 			</a>
 		</div>
 		<div class="media-body">
-			<h4 class="media-heading"><%= q.email %></h4>
-			<div><%= time_ago_in_words q.created_at %> ago</div>
+			<h4 class="media-heading"><%= q.location %></h4>
+			<div>Added <%= time_ago_in_words q.created_at %> ago by <%= q.name %> </div>
 			<%= q.body %>
 			<div>
 				<a href="<%= question_path(q)%>">View Question</a>

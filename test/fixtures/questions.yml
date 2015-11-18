@@ -2,8 +2,12 @@
 
 one:
   email: MyString
+  location: MyString
+  name: MyString
   body: MyText
 
 two:
   email: MyString
+  location: MyString
+  name: MyString
   body: MyText
