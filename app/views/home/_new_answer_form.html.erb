@@ -3,7 +3,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Submit Answer</h4>
+				<h4 class="modal-title" id="myModalLabel">Submit Offer</h4>
 			</div>
 			<div class="modal-body">
 				<%= form_for :questions, url: '/answers', html: { class: 'form-horizontal'} do %>
@@ -15,15 +15,15 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputQuestion" class="col-sm-2 control-label">Answer</label>
+						<label for="inputQuestion" class="col-sm-2 control-label">Offer</label>
 						<div class="col-sm-10">
-							<textarea name="answer[body]" class="form-control" id="inputQuestion" placeholder="Tell us about what you're craving" required></textarea>
+							<textarea name="answer[body]" class="form-control" id="inputQuestion" placeholder="Feel free to describe your offer" required></textarea>
 						</div>
 					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="submit" class="btn btn-primary">Submit Answer</button>
+					<button type="submit" class="btn btn-primary">Submit Offer</button>
 				</div>
 			<% end %>
 		</div>

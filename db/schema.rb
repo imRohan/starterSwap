@@ -25,9 +25,11 @@ ActiveRecord::Schema.define(version: 20151118215807) do
     t.string   "email"
     t.string   "location"
     t.string   "name"
+    t.string   "starterName"
+    t.string   "starterAge"
     t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

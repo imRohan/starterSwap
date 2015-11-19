@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
 	def create
 		Question.create(question_params)
 		session[:current_user_email] = question_params[:email]
+		session[:current_user_name] = question_params[:name]
 		redirect_to root_path
 	end
 
@@ -14,7 +15,7 @@ class QuestionsController < ApplicationController
 	private
 
 	def question_params
-			params.require(:question).permit(:email, :body, :location, :name)
+			params.require(:question).permit(:email, :body, :location, :name, :starterName, :starterAge)
 	end
 
 end
