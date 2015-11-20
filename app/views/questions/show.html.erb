@@ -4,19 +4,6 @@
 	<p><%= @question.body %></p>
 	<h4>Offered by: <%= @question.name %></h4>
 </div>
-<!-- <div class="lead well">
-	<div class="media">
-		<div class="media-left">
-			<a href="#">
-				<img class="media-object" src="<%= @question.gravatar %>">
-			</a>
-		</div>
-		<div class="media-body">
-			<h4 class="media-heading"><%= @question.email %> asked</h4>
-			<%= @question.body %>
-		</div>
-	</div>
-</div> -->
 <div class="container">
 	<button type="button" class="btn btn-success" data-toggle="modal" data-target="#new-answer-modal">Submit Offer</button><br/>
 	<%= render 'home/new_answer_form' %>
@@ -37,5 +24,3 @@
 	<h1>There are no offers for this culture. Be the first!</h1>
 	<% end %>	
 </div>
-<!-- 			params.require(:question).permit(:email, :body, :location, :name, :starterName, :starterAge)
--->
