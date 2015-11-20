@@ -2,11 +2,18 @@ require 'test_helper'
 
 class MainMailerTest < ActionMailer::TestCase
   test "notify_question_author" do
-    mail = MainMailer.notify_question_author
-    assert_equal "New answer to your question", mail.subject
-    assert_equal ["to@example.org"], mail.to
-    assert_equal ["from@example.com"], mail.from
-    assert_match "Hi", mail.body.encoded
+
+  	question = Question.create email: 'rlikhite@gmail.com', body: 'Test', :location => ['Toronto'], :starterName => ['The Big One'], :starterAge => ['2']
+  	answer = Answer.create email: 'author@gmail.com', body: 'test answer'
+
+  	question.answers << answer 
+
+    mail = MainMailer.notify_question_author(answer)
+    assert_equal "New offer", mail.subject
+
+    assert_equal [question.email], mail.to
+    assert_equal [answer.email], mail.from
+    assert_match answer.body, mail.body.encoded
   end
 
 end
